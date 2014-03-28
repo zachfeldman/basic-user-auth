@@ -1,0 +1,9 @@
+<h1>All of <%=@user.fname%>'s posts.</h1>
+
+<% @user.posts.each do |post| %>
+  <%=post.body%>
+  <br>
+  <%=post.created_at %>
+  <br>
+  <br>
+<% end %>

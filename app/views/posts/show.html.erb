@@ -1,0 +1,10 @@
+<h1>Le Post</h1>
+
+<%=@post.body %>
+<br>
+<%=distance_of_time_in_words(Time.now, @post.created_at) %>
+
+
+<%=link_to "Edit this post", edit_user_post_path(@post.user, @post) %>
+
+<%=link_to "Delete this post", user_post_path(@post.user, @post), method: :delete %>

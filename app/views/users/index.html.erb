@@ -1,0 +1,11 @@
+<h1>All Users</h1>
+
+<% @users.each do |user| %>
+  First Name: <%=user.fname %>
+  <br>
+  Last Name: <%=user.lname %>
+  <br>
+  Email: <%=user.email %>
+  <br>
+  <%=link_to "Destroy Me", user_path(user), method: :delete %>
+<% end %>
